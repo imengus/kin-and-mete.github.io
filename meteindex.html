@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kin &amp; Mete | Medical school interview tutoring</title>
+<meta name="description" content="One-to-one UK medical school interview preparation from two third-year medical students at UCL and the University of Bristol. MMI and panel practice, detailed feedback, from £45/hr.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FFFFFF;
+    --paper-alt: #F6F5F2;
+    --ink: #2B2D31;
+    --muted: #5C5F66;
+    --line: #E3DFD5;
+    --gold: #B09257;
+    --gold-text: #86683A;
+    --char: #2B2D31;
+    --char-deep: #232529;
+    --on-char: #F4F2EE;
+    --on-char-muted: #B9BBC0;
+    --gold-on-char: #CDB07A;
+    --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    --sans: "Public Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --measure: 38rem;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #1D1F22;
+      --paper-alt: #222428;
+      --ink: #ECEAE5;
+      --muted: #A8ABB1;
+      --line: #383B40;
+      --gold: #C2A46D;
+      --gold-text: #CDB07A;
+      --char: #2B2D31;
+      --char-deep: #26282C;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #1D1F22;
+    --paper-alt: #222428;
+    --ink: #ECEAE5;
+    --muted: #A8ABB1;
+    --line: #383B40;
+    --gold: #C2A46D;
+    --gold-text: #CDB07A;
+    --char: #2B2D31;
+    --char-deep: #26282C;
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+
+  .wrap { width: min(70rem, 100% - 3rem); margin-inline: auto; }
+
+  /* Header */
+  .site-header {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--char-deep);
+    color: var(--on-char);
+    border-bottom: 1px solid rgba(205, 176, 122, 0.25);
+  }
+  .site-header .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem; min-height: 4rem;
+  }
+  .brand {
+    font-family: var(--serif); font-size: 1.35rem; text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .brand span { color: var(--gold-on-char); }
+  .site-nav { display: flex; gap: 1.75rem; font-size: 0.95rem; }
+  .site-nav a { text-decoration: none; color: var(--on-char-muted); padding-block: 0.25rem; }
+  .site-nav a:hover { color: var(--on-char); }
+  @media (max-width: 40rem) {
+    .site-nav a:not(.nav-contact) { display: none; }
+  }
+  .nav-contact { color: var(--gold-on-char) !important; }
+
+  /* Hero */
+  .hero {
+    background: var(--char);
+    color: var(--on-char);
+    padding: clamp(4rem, 10vw, 7.5rem) 0 clamp(3.5rem, 8vw, 6rem);
+  }
+  .hero h1 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(2.4rem, 5.6vw, 4.25rem);
+    line-height: 1.08; letter-spacing: -0.01em;
+    max-width: 16ch; margin: 0 0 1.75rem;
+  }
+  .hero-rule { width: 4.5rem; height: 1px; background: var(--gold-on-char); margin: 0 0 1.75rem; border: 0; }
+  .hero p { max-width: 34rem; color: var(--on-char-muted); font-size: 1.15rem; margin: 0 0 2.5rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: 0.9rem; }
+  .btn {
+    display: inline-block; text-decoration: none; font-weight: 500;
+    padding: 0.8rem 1.4rem; border-radius: 2px; font-size: 0.98rem;
+    border: 1px solid var(--gold-on-char);
+  }
+  .btn-gold { background: var(--gold-on-char); color: #232529; }
+  .btn-gold:hover { background: #D9BF8D; }
+  .btn-ghost { color: var(--on-char); }
+  .btn-ghost:hover { background: rgba(205, 176, 122, 0.12); }
+
+  /* Statement */
+  .section { padding: clamp(4rem, 9vw, 6.5rem) 0; }
+  .section-head {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.15;
+    margin: 0 0 1.25rem;
+  }
+  .lede {
+    font-family: var(--serif); font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+    line-height: 1.5; max-width: 40rem; margin: 0 0 3.5rem; color: var(--ink);
+  }
+  .statement-grid {
+    display: grid; gap: 3rem 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  }
+  .statement-grid h3 {
+    font-family: var(--serif); font-weight: 500; font-size: 1.35rem;
+    margin: 0 0 0.75rem; padding-top: 1rem;
+    border-top: 1px solid var(--gold);
+  }
+  .statement-grid p { margin: 0 0 1rem; color: var(--muted); max-width: var(--measure); }
+  .statement-grid strong { color: var(--ink); font-weight: 600; }
+
+  .offers { margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid var(--line); }
+  .offers-title { font-size: 0.98rem; color: var(--muted); margin: 0 0 1.5rem; }
+  .offers ul {
+    list-style: none; margin: 0; padding: 0;
+    display: grid; gap: 1.5rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  }
+  .offers li { display: flex; flex-direction: column; }
+  .offers .school { font-family: var(--serif); font-size: 1.45rem; line-height: 1.2; }
+  .offers .who { font-size: 0.9rem; color: var(--gold-text); }
+
+  /* Tutors */
+  .tutors { background: var(--paper-alt); }
+  .tutor {
+    display: grid; gap: 2.5rem 4.5rem; align-items: start;
+    grid-template-columns: minmax(14rem, 22rem) 1fr;
+  }
+  .tutor + .tutor { margin-top: clamp(4rem, 8vw, 6rem); }
+  .tutor.flip { grid-template-columns: 1fr minmax(14rem, 22rem); }
+  .tutor.flip .portrait { order: 2; }
+  @media (max-width: 52rem) {
+    .tutor, .tutor.flip { grid-template-columns: 1fr; }
+    .tutor.flip .portrait { order: 0; }
+    .portrait { max-width: 20rem; }
+  }
+  .portrait { position: relative; margin: 0 1rem 1rem 0; }
+  .portrait::after {
+    content: ""; position: absolute; inset: 1rem -1rem -1rem 1rem;
+    border: 1px solid var(--gold); z-index: 0;
+  }
+  .portrait img {
+    position: relative; z-index: 1; width: 100%;
+    aspect-ratio: 4 / 5; object-fit: cover;
+    background: var(--line);
+  }
+  .tutor h3 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(1.9rem, 3.5vw, 2.4rem); line-height: 1.1; margin: 0 0 0.35rem;
+  }
+  .tutor .role { color: var(--gold-text); margin: 0 0 1.75rem; font-size: 1rem; }
+  .tutor .bio p { margin: 0 0 1.1rem; max-width: var(--measure); color: var(--muted); }
+  .tutor .bio strong { color: var(--ink); font-weight: 600; }
+
+  /* Pricing & contact */
+  .pricing { background: var(--char); color: var(--on-char); }
+  .pricing .section-head { color: var(--on-char); }
+  .pricing-grid {
+    display: grid; gap: 3rem 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    margin-top: 2.5rem;
+  }
+  .price {
+    font-family: var(--serif); font-size: clamp(3rem, 7vw, 4.5rem);
+    line-height: 1; color: var(--gold-on-char); margin: 0 0 0.5rem;
+  }
+  .price small { font-size: 0.4em; color: var(--on-char-muted); margin-left: 0.15em; }
+  .price-from { color: var(--on-char-muted); margin: 0 0 0.6rem; }
+  .price-note { color: var(--on-char-muted); max-width: 30rem; margin: 1.25rem 0 0; }
+  .included h3 {
+    font-family: var(--serif); font-weight: 500; font-size: 1.35rem;
+    margin: 0 0 1.25rem; padding-top: 1rem; border-top: 1px solid var(--gold-on-char);
+  }
+  .included ul { list-style: none; margin: 0; padding: 0; }
+  .included li {
+    padding: 0.85rem 0 0.85rem 1.75rem; position: relative;
+    border-bottom: 1px solid rgba(244, 242, 238, 0.1);
+    color: var(--on-char-muted);
+  }
+  .included li::before {
+    content: ""; position: absolute; left: 0.2rem; top: 1.45rem;
+    width: 0.55rem; height: 1px; background: var(--gold-on-char);
+  }
+  .included li strong { color: var(--on-char); font-weight: 600; }
+
+  .contact {
+    margin-top: clamp(4rem, 8vw, 5.5rem); padding-top: 2.5rem;
+    border-top: 1px solid rgba(205, 176, 122, 0.3);
+  }
+  .contact h3 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(1.7rem, 3vw, 2.1rem); margin: 0 0 0.6rem;
+  }
+  .contact > p { color: var(--on-char-muted); max-width: 36rem; margin: 0 0 2rem; }
+  .emails { display: grid; gap: 1rem 2rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+  .email {
+    display: block; text-decoration: none; padding: 1.1rem 1.25rem;
+    border: 1px solid rgba(205, 176, 122, 0.4); border-radius: 2px;
+  }
+  .email:hover { border-color: var(--gold-on-char); background: rgba(205, 176, 122, 0.08); }
+  .email .name { display: block; font-family: var(--serif); font-size: 1.2rem; }
+  .email .addr { display: block; color: var(--gold-on-char); font-size: 0.95rem; overflow-wrap: anywhere; }
+
+  .site-footer {
+    background: var(--char-deep); color: var(--on-char-muted);
+    font-size: 0.9rem; padding: 1.75rem 0;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">Kin <span>&amp;</span> Mete</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#statement">Our statement</a>
+      <a href="#tutors">Meet us</a>
+      <a class="nav-contact" href="#pricing">Pricing &amp; contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <h1>Specialist medical school interview tutoring</h1>
+      <hr class="hero-rule">
+      <p>One-to-one MMI and panel interview preparation from medical students at UCL and the University of Bristol.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="#pricing">Get in touch</a>
+        <a class="btn btn-ghost" href="#tutors">Meet your tutors</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="statement">
+    <div class="wrap">
+      <h2 class="section-head">Our statement</h2>
+      <p class="lede">We are two medical students, from the University of Bristol and UCL, offering personalised, specialist preparation for UK medical school interviews.</p>
+
+      <div class="statement-grid">
+        <div>
+          <h3>Why we set this up</h3>
+          <p>Generic online material and tutoring can only take a candidate so far, and rarely help them stand out. Tutors at larger agencies often work with many students at once, usually over a short period.</p>
+          <p>We set up Kin &amp; Mete to offer something more specialist. We take on fewer students and give each one our time, with a single focus: helping them perform as well as they possibly can, at interview and beyond.</p>
+        </div>
+        <div>
+          <h3>How we teach</h3>
+          <p>Each student receives tailored sessions that go beyond what general guides can offer. We explore interview topics in real depth, from medical ethics and the NHS to communication skills and motivation for medicine.</p>
+          <p>Our aim is for students to walk into their interviews understanding the material, rather than reciting it, so they can reason clearly through any question they are asked.</p>
+        </div>
+        <div>
+          <h3>Why us</h3>
+          <p>Between us, we have interviewed at six medical schools and received five offers. We both scored in the top 6% of the UCAT, and we bring over 450 hours of teaching experience, from small-group tuition to one-to-one GCSE and A-Level Maths.</p>
+          <p>We value the relationships we build with our students. As we progress through our own training, we hope to stay in touch, offering mentorship, guidance through medical school, and advice on specialty portfolios and research publications.</p>
+        </div>
+      </div>
+
+      <div class="offers">
+        <p class="offers-title">Offers between us</p>
+        <ul>
+          <li><span class="school">UCL</span><span class="who">Kin</span></li>
+          <li><span class="school">Southampton</span><span class="who">Kin</span></li>
+          <li><span class="school">Bristol</span><span class="who">Mete</span></li>
+          <li><span class="school">Sheffield</span><span class="who">Mete</span></li>
+          <li><span class="school">Liverpool</span><span class="who">Mete</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tutors" id="tutors">
+    <div class="wrap">
+      <h2 class="section-head" style="margin-bottom: clamp(2.5rem, 6vw, 4rem);">Meet us</h2>
+
+      <article class="tutor">
+        <figure class="portrait">
+          <img src="https://imengus.github.io/kin-and-mete.github.io/img/kin.jpg" alt="Ilkin (Kin) Mengusoglu" width="440" height="550">
+        </figure>
+        <div class="bio">
+          <h3>Ilkin (Kin) Mengusoglu</h3>
+          <p class="role">Third-year medicine, UCL</p>
+          <p>I&#8217;m Kin, a third-year medical student at UCL, currently completing an intercalated BSc in Medical Anthropology. As a future psychiatrist, I plan to pioneer culturally specific therapies and international knowledge exchange.</p>
+          <p>I scored 3000 in the UCAT (Band 2, top 5%) and received offers from UCL and Southampton. Through time-optimisation and structured preparation, I achieved eleven grade 9s at GCSE and A*A*A*A*A* at A-Level.</p>
+          <p>I have taught over 150 hours in small groups, at a tuition centre and in A-Level Maths and Chemistry, and spent many hours mentoring presenters at the Medical Discussion Group I founded at my college. Realising how much I enjoyed teaching, I expanded into mentoring students through medical school interviews.</p>
+          <p>Over 15 months travelling in the Middle East and South Asia, I communicated with thousands of people from all walks of life. The experience and intuition I gained allow me to give honest, specific feedback on areas teachers and friends may have missed. Together, we will build custom resources and plans for every area of your preparation.</p>
+        </div>
+      </article>
+
+      <article class="tutor flip">
+        <figure class="portrait">
+          <img src="https://imengus.github.io/kin-and-mete.github.io/img/mete.jpg" alt="Mete Watson" width="440" height="550">
+        </figure>
+        <div class="bio">
+          <h3>Mete Watson</h3>
+          <p class="role">Third-year medicine, University of Bristol</p>
+          <p>I&#8217;m Mete, a third-year medical student at the University of Bristol, with an ambition to become a trauma and orthopaedic surgeon.</p>
+          <p>I scored 2960 in the UCAT (Band 1, top 6%) and received offers from Bristol, Sheffield and Liverpool. At Bristol, I scored 89/100 in my end-of-year exams (top 5% cohort commendation) and was awarded the top prize for the Student Choice Essay. Previously, I achieved ten grade 9s at GCSE and A*AAA at A-Level.</p>
+          <p>I have delivered over 300 hours of GCSE and A-Level Maths tutoring. Medical interview tutoring allows me to combine that teaching experience with my own recent application, offering students the committed, personal support every applicant deserves.</p>
+          <p>My sessions focus on understanding over memorisation, encouraging students to think out loud to build clear, structured reasoning. Above all, I make sure every student feels confident and well prepared. If you are looking for a tutor invested in your success, I would love to hear from you.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section pricing" id="pricing">
+    <div class="wrap">
+      <h2 class="section-head">Pricing &amp; contact</h2>
+
+      <div class="pricing-grid">
+        <div>
+          <p class="price-from">Starting at</p>
+          <p class="price">£45<small>/hr</small></p>
+          <p class="price-note">We operate flexible pricing, going down to accommodate each background. We&#8217;re glad to have a chat about any query, even if it is about another area of medical school.</p>
+        </div>
+        <div class="included">
+          <h3>What&#8217;s included</h3>
+          <ul>
+            <li><strong>Full</strong> MMI and panel interview practice</li>
+            <li><strong>Full</strong> breakdown of and feedback on your answers</li>
+            <li><strong>Full</strong> text support throughout your interview and exam period</li>
+            <li>Insider knowledge of admissions</li>
+            <li>Signposting to extra resources</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contact">
+        <h3>Get in touch</h3>
+        <p>Email either of us to arrange an initial chat.</p>
+        <div class="emails">
+          <a class="email" href="mailto:ilkin.mengusoglu.23@ucl.ac.uk">
+            <span class="name">Kin</span>
+            <span class="addr">ilkin.mengusoglu.23@ucl.ac.uk</span>
+          </a>
+          <a class="email" href="mailto:metewatson8@gmail.com">
+            <span class="name">Mete</span>
+            <span class="addr">metewatson8@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Kin &amp; Mete, medical school interview tutoring</div>
+</footer>
+
+</body>
+</html>
