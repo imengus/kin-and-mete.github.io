@@ -22,6 +22,10 @@ module.exports = {
           dark: '0 1px 2px rgba(0,0,0,0.3), 0 20px 40px -16px rgba(0,0,0,0.55)',
           gold: '0 14px 30px -12px rgba(205,176,122,0.5)',
         },
+        screens: {
+      'max-52': { max: '52rem' },
+      'max-40': { max: '40rem' },
+    },
     },
   },
   plugins: [],
