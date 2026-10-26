@@ -1,0 +1,107 @@
+body {
+  background: rgb(238, 244, 250);
+  /* background-size: 110%;
+  background-attachment: fixed; */
+}
+
+#c4 {
+  transform: translateY(-5%);
+}
+
+#icons {
+  top: 0;
+  right: 0;
+  transform: translateX(-5%);
+}
+
+#icons li {
+  display: inline;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+.fa {
+  transform: translateY(20%);
+}
+
+a {
+  color: rgb(32, 155, 255);
+}
+
+a:hover {
+  color: rgb(62, 62, 145);
+  text-decoration: underline;
+}
+
+#about, #projects {
+  transform: translateY(-2%);
+}
+
+#position {
+  font-size: 13px;
+  transform: translateY(-27%);
+}
+
+#downwards {
+  transform: translateY(67%);
+}
+@media (max-width: 995px) {
+  /* body {
+    background: url(img/mount4.jpg) top right no-repeat;
+    background-size: 400%;
+    background-attachment: fixed;
+  } */
+  #c1 {
+    height: 100%; 
+    overflow: hidden;
+  }
+
+  #about, #projects {
+    transform: translateY(-1%);
+  }
+}
+
+@media (max-width: 1500px) {
+  #position {
+    font-size: 13px;
+    transform: translateY(0%);
+  }
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: grey;
+}
+
+::selection {
+  color: white;
+  background: grey;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(253, 242, 220);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(170, 167, 132);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid rgb(163, 147, 117);  /* creates padding around scroll thumb */
+}
+
+
+ul > li + li {
+margin-left: 5px;
+padding-left: 5px;
+border-left: 1px solid #bbb;
+}
+
+#linkback {
+  top: 0;
+  transform: translateY(+170%);
+  margin-top: -50px;
+}

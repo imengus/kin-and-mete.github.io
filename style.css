@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Colour tokens (dark mode switches here) */
+:root {
+    --paper: #FFFFFF; --paper-alt: #F6F5F2; --ink: #2B2D31; --muted: #5C5F66;
+    --line: #E3DFD5; --gold: #B09257; --gold-text: #86683A; --char: #2B2D31;
+    --char-deep: #232529; --on-char: #F4F2EE; --on-char-muted: #B9BBC0; --gold-on-char: #CDB07A;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1D1F22; --paper-alt: #222428; --ink: #ECEAE5; --muted: #A8ABB1;
+      --line: #383B40; --gold: #C2A46D; --gold-text: #CDB07A; --char-deep: #26282C;
+      color-scheme: dark;
+    }
+  }
+/* 
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+
+  html {
+    scroll-behavior: smooth;
+  } */
