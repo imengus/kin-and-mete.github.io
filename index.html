@@ -7,7 +7,7 @@
 <title>Mete &middot; Ilkin | Medical school interview tutoring</title>
 <meta name="description" content="One-to-one UK medical school interview preparation from two third-year medical students at UCL and the University of Bristol. MMI and panel practice, detailed feedback, from £25/hr.">
 <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-<link rel="stylesheet" href="dist/assets/index-P-1f4XEK.css">
+<link rel="stylesheet" href="dist/assets/index-sDMNGf4m.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -53,16 +53,81 @@
   </div>
 </header>
 
+<style>
+  .hero-photos { display: none; }
+  @media (min-width: 52rem) {
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 27rem) minmax(0, 1fr);
+      gap: clamp(3rem, 6vw, 5.5rem);
+      align-items: center;
+    }
+    .hero-grid h1 { font-size: clamp(2.4rem, 4.2vw, 3.8rem); }
+    .hero-photos { display: block; position: relative; width: 100%; aspect-ratio: 1 / 1.05; }
+    .hero-glow {
+      position: absolute; inset: 8%; border-radius: 9999px;
+      background: radial-gradient(circle, rgba(205,176,122,0.22), transparent 70%);
+      filter: blur(40px);
+    }
+    /* .hero-frame {
+      position: absolute; left: 4%; top: 4%; width: 56%; aspect-ratio: 4 / 5;
+      border-radius: 1rem; border: 1px solid rgba(205,176,122,0.35);
+    } */
+    .hero-photos figure {
+      position: absolute; width: 56%; margin: 0; overflow: hidden;
+      border-radius: 1rem; border: 1px solid rgba(205,176,122,0.5);
+      box-shadow: 0 24px 48px -20px rgba(0,0,0,0.7);
+    }
+    .hero-photos .p1 { left: 0; top: 0; z-index: 1; }
+    .hero-photos .p2 { right: 0; bottom: 0; z-index: 2; }
+    .hero-photos img {
+      display: block; width: 100%; aspect-ratio: 4 / 5;
+      object-fit: cover; object-position: center top;
+      transition: transform 700ms;
+    }
+    .hero-photos figure:hover img { transform: scale(1.05); }
+    .hero-photos figcaption {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      padding: 2.5rem 1rem 0.75rem;
+      background: linear-gradient(to top, rgba(20,21,23,0.85), transparent);
+      font-weight: 600; font-size: 1.05rem; letter-spacing: 0.02em;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-photos img { transition: none; }
+    .hero-photos figure:hover img { transform: none; }
+  }
+</style>
+
 <main id="top">
   <section class="bg-char bg-[radial-gradient(ellipse_at_85%_0%,rgba(205,176,122,0.2),transparent_55%)] text-onchar pt-[clamp(4rem,10vw,7.5rem)] pb-[clamp(3.5rem,8vw,6rem)] max-[52rem]:pt-10 max-[52rem]:pb-24 max-[52rem]:min-h-[calc(100svh-3.5rem)] max-[52rem]:flex max-[52rem]:items-center">
-    <div class="w-[min(70rem,100%_-_3rem)] max-[52rem]:w-[calc(100%_-_2.5rem)] mx-auto">
-      <h1 class="font-serif font-medium text-[clamp(2.6rem,6vw,4.6rem)] leading-[1.05] tracking-[-0.01em] max-w-[16ch] mb-7">Specialist medical school interview tutoring</h1>
-      <hr class="w-[4.5rem] h-0.5 rounded-full border-0 bg-gradient-to-r from-goldonchar to-transparent mb-7">
-      <p class="max-w-[34rem] text-oncharmuted text-[1.15rem] mb-10 max-[52rem]:text-[1.05rem] max-[52rem]:mb-8">One-to-one MMI and panel interview preparation from medical students at the University of Bristol and UCL.</p>
-      <div class="flex flex-wrap gap-4 max-[52rem]:flex-col max-[52rem]:gap-3">
-        <a class="inline-block no-underline font-semibold py-[0.8rem] px-6 rounded-full text-[0.95rem] max-[52rem]:py-4 max-[52rem]:text-center bg-goldonchar text-[#232529] shadow-dark transition duration-300 motion-safe:hover:-translate-y-0.5 hover:bg-[#D9BF8D] hover:shadow-gold" href="#pricing">Get in touch</a>
-        <a class="inline-block no-underline font-semibold py-[0.8rem] px-6 rounded-full text-[0.95rem] max-[52rem]:py-4 max-[52rem]:text-center ring-1 ring-goldonchar text-onchar transition duration-300 motion-safe:hover:-translate-y-0.5 hover:bg-[rgba(205,176,122,0.14)] hover:shadow-gold" href="#tutors">Meet your tutors</a>
+    <div class="hero-grid w-[min(70rem,100%_-_3rem)] max-[52rem]:w-[calc(100%_-_2.5rem)] mx-auto">
+
+      <!-- Portrait collage (desktop only) -->
+      <div class="hero-photos">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <!-- <div class="hero-frame" aria-hidden="true"></div> -->
+        <figure class="p1">
+          <img src="img/mete1.png" alt="Mete" width="440" height="550" fetchpriority="high">
+          <figcaption class="font-serif">Mete</figcaption>
+        </figure>
+        <figure class="p2">
+          <img src="img/kin1.png" alt="Ilkin" width="440" height="550" fetchpriority="high">
+          <figcaption class="font-serif">Ilkin</figcaption>
+        </figure>
       </div>
+
+      <!-- Text -->
+      <div>
+        <h1 class="font-serif font-medium text-[clamp(2.6rem,6vw,4.6rem)] leading-[1.05] tracking-[-0.01em] max-w-[16ch] mb-7">Specialist medical school interview tutoring</h1>
+        <hr class="w-[4.5rem] h-0.5 rounded-full border-0 bg-gradient-to-r from-goldonchar to-transparent mb-7">
+        <p class="max-w-[34rem] text-oncharmuted text-[1.15rem] mb-10 max-[52rem]:text-[1.05rem] max-[52rem]:mb-8">One-to-one MMI and panel interview preparation from medical students at the University of Bristol and UCL.</p>
+        <div class="flex flex-wrap gap-4 max-[52rem]:flex-col max-[52rem]:gap-3">
+          <a class="inline-block no-underline font-semibold py-[0.8rem] px-6 rounded-full text-[0.95rem] max-[52rem]:py-4 max-[52rem]:text-center bg-goldonchar text-[#232529] shadow-dark transition duration-300 motion-safe:hover:-translate-y-0.5 hover:bg-[#D9BF8D] hover:shadow-gold" href="#pricing">Get in touch</a>
+          <a class="inline-block no-underline font-semibold py-[0.8rem] px-6 rounded-full text-[0.95rem] max-[52rem]:py-4 max-[52rem]:text-center ring-1 ring-goldonchar text-onchar transition duration-300 motion-safe:hover:-translate-y-0.5 hover:bg-[rgba(205,176,122,0.14)] hover:shadow-gold" href="#tutors">Meet your tutors</a>
+        </div>
+      </div>
+
     </div>
   </section>
  
@@ -117,7 +182,7 @@
  
       <article class="group relative rounded-3xl bg-[rgba(255,255,255,0.05)] ring-1 ring-[rgba(205,176,122,0.3)] shadow-dark transition duration-300 hover:ring-[rgba(205,176,122,0.6)] hover:shadow-gold md:grid md:grid-cols-[minmax(12rem,16rem)_1fr] lg:grid-cols-[minmax(14rem,22rem)_1fr] md:gap-x-8 lg:gap-x-12 md:gap-y-8 md:items-start md:p-8 lg:p-10 p-5 md:overflow-visible">
         <figure class="relative overflow-hidden rounded-2xl ring-1 ring-[rgba(205,176,122,0.6)] shadow-gold md:shadow-dark mx-auto w-[74%] max-w-[18rem] md:w-auto md:max-w-none md:mx-0 min-w-0">
-          <img class="block w-full aspect-[4/5] object-cover object-center motion-safe:transition motion-safe:duration-700 motion-safe:group-hover:scale-105" src="https://imengus.github.io/kin-and-mete.github.io/img/mete.jpg" alt="Mete" width="440" height="550">
+          <img class="block w-full aspect-[4/5] object-cover object-center motion-safe:transition motion-safe:duration-700 motion-safe:group-hover:scale-105" src="img/mete1.png" alt="Mete" width="440" height="550">
           <div class="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/20 bg-gradient-to-t from-black/25 via-transparent to-transparent"></div>
         </figure>
         <div class="min-w-0 mt-6 md:mt-0">
@@ -137,7 +202,8 @@
  
       <article class="group mt-6 md:mt-10 relative rounded-3xl bg-[rgba(255,255,255,0.05)] ring-1 ring-[rgba(205,176,122,0.3)] shadow-dark transition duration-300 hover:ring-[rgba(205,176,122,0.6)] hover:shadow-gold md:grid md:grid-cols-[1fr_minmax(12rem,16rem)] lg:grid-cols-[1fr_minmax(14rem,22rem)] md:gap-x-8 lg:gap-x-12 md:gap-y-8 md:items-start md:p-8 lg:p-10 p-5 md:overflow-visible">
         <figure class="relative overflow-hidden rounded-2xl ring-1 ring-[rgba(205,176,122,0.6)] shadow-gold md:shadow-dark mx-auto w-[74%] max-w-[18rem] md:w-auto md:max-w-none md:mx-0 min-w-0 md:order-2">
-          <img class="block w-full aspect-[4/5] object-cover object-center motion-safe:transition motion-safe:duration-700 motion-safe:group-hover:scale-105" src="https://imengus.github.io/kin-and-mete.github.io/img/kin.jpg" alt="Ilkin" width="440" height="550">
+          <img class="block w-full aspect-[4/5] object-cover object-center motion-safe:transition motion-safe:duration-700 motion-safe:group-hover:scale-105" src="img/kin1.png" alt="Ilkin" width="440" height="550">
+          <!-- <img class="block w-full aspect-[4/5] object-cover object-center motion-safe:transition motion-safe:duration-700 motion-safe:group-hover:scale-105" src="https://imengus.github.io/kin-and-mete.github.io/img/kin1.png" alt="Ilkin" width="440" height="550"> -->
           <div class="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/20 bg-gradient-to-t from-black/25 via-transparent to-transparent"></div>
         </figure>
         <div class="min-w-0 mt-6 md:mt-0">
