@@ -7,14 +7,117 @@
 <title>Mete &middot; Ilkin | Medical school interview tutoring</title>
 <meta name="description" content="One-to-one UK medical school interview preparation from two third-year medical students at UCL and the University of Bristol. MMI and panel practice, detailed feedback, from £25/hr.">
 <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-<link rel="stylesheet" href="dist/assets/index-sDMNGf4m.css">
+<link rel="stylesheet" href="dist/assets/index-BLf2CF05.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
 </head>
 <body class="m-0 bg-paper text-ink font-sans font-light text-[1.0625rem] leading-[1.7] antialiased [&_a:focus-visible]:outline [&_a:focus-visible]:outline-2 [&_a:focus-visible]:outline-gold [&_a:focus-visible]:outline-offset-[3px] [&_a:focus-visible]:rounded-sm">
+<!-- Friendlier font: put this in your <head> (falls back to system fonts if it doesn't load) -->
 
+<style>
+  /* Friendlier font across the whole site (needs the Nunito <link> tags in <head>) */
+  body, .font-serif {
+    font-family: 'Nunito', ui-rounded, 'SF Pro Rounded', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+
+  /* Logo keeps Cormorant */
+  .logo, .logo .font-serif {
+    font-family: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+  }
+  #pricing .pr-italic { font-style: normal; }
+
+/* Free consultation banner */
+/* Free consultation banner */
+.pr-free {
+  position: relative; display: flex; align-items: center; gap: 1.25rem;
+  border-radius: 1.5rem; padding: 1.5rem 1.75rem; margin-bottom: 2rem;
+  background: rgba(205,176,122,0.08);
+  border: 1px solid rgba(205,176,122,0.7);
+  box-shadow:
+    0 12px 28px -10px rgba(0,0,0,0.55),
+    0 0 24px rgba(205,176,122,0.2);
+}
+.pr-free-badge {
+  flex-shrink: 0; border-radius: 9999px; padding: 0.45rem 1.15rem;
+  background: #E2C98F; color: #232529;
+  font-weight: 800; font-size: 1.1rem;
+}
+.pr-free h3 { font-size: 1.55rem; line-height: 1.2; margin: 0 0 0.25rem; }
+.pr-free p { margin: 0; }
+
+  /* Sliding scale */
+  .pr-scale-wrap { margin-top: 1.5rem; }
+  .pr-scale-cap { font-size: 0.95rem; font-weight: 600; color: rgba(244,242,238,0.6); margin-bottom: 1rem; }
+  .pr-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; }
+  .pr-track { position: relative; align-items: center; justify-items: center; margin-bottom: 0.9rem; }
+  .pr-track::before {
+    content: ""; position: absolute; left: 8%; right: 8%; top: 50%; height: 3px;
+    transform: translateY(-50%); border-radius: 9999px;
+    background: linear-gradient(to right, rgba(150,150,146,0.45), rgba(205,176,122,0.95));
+  }
+  .pr-dot { position: relative; border-radius: 9999px; }
+  .pr-dot.d1 { width: 10px; height: 10px; background: #8d8d89; }
+  .pr-dot.d2 { width: 10px; height: 10px; background: #A8946A; }
+  .pr-dot.d3 { width: 10px; height: 10px; background: #E2C98F; box-shadow: 0 0 12px rgba(205,176,122,0.6); }
+
+  .pr-step { display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: flex-end; }
+  .pr-amt { font-weight: 800; line-height: 1; font-size: 2rem; }
+  .pr-s1 .pr-amt { color: #8d8d89; }
+  .pr-s2 .pr-amt { color: #A8946A; }
+  .pr-s3 .pr-amt { color: #E2C98F; text-shadow: 0 0 18px rgba(205,176,122,0.45); }
+  .pr-lbl { margin-top: 0.5rem; font-size: 0.95rem; font-weight: 700; }
+  .pr-s1 .pr-lbl { color: rgba(244,242,238,0.5); }
+  .pr-s2 .pr-lbl { color: rgba(244,242,238,0.7); }
+  .pr-s3 .pr-lbl { color: #E2C98F; }
+  .pr-sub { margin-top: 0.1rem; font-size: 0.8rem; color: rgba(244,242,238,0.45); }
+  .pr-s3 .pr-sub { color: rgba(244,242,238,0.75); }
+  .pr-s3 {
+        border-radius: 1.25rem; padding: 0.9rem 0.25rem 0.8rem;
+        background: rgba(205,176,122,0.08);
+        border: 1px solid rgba(205,176,122,0.55);
+      }
+  .pr-suggest {
+    display: inline-block; margin-bottom: 0.5rem; border-radius: 9999px; padding: 0.1rem 0.7rem;
+    background: #CDB07A; color: #232529; font-size: 0.75rem; font-weight: 700;
+  }
+  .pr-note { margin-top: 1rem; font-size: 0.92rem; color: rgba(244,242,238,0.6); }
+
+  @media (max-width: 52rem) {
+    .pr-free { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 1.25rem; }
+    .pr-amt { font-size: 1.7rem; }
+    .pr-sub { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pr-free { animation: none; }
+  }
+
+  /* A-Level subjects (aside) */
+.pr-alevel {
+  margin-top: 2.5rem; padding-top: 1.1rem;
+  border-top: 1px solid rgba(205,176,122,0.25);
+  display: flex; align-items: center; flex-wrap: wrap; gap: 0.6rem 1.1rem;
+  font-size: 0.95rem; color: rgba(244,242,238,0.7);
+}
+.pr-alevel-title { font-weight: 700; color: rgba(244,242,238,0.85); }
+.pr-alevel-person { display: inline-flex; align-items: center; gap: 0.45rem; }
+.pr-alevel-name { font-weight: 700; color: #E2C98F; }
+.pr-chip {
+  border-radius: 9999px; padding: 0.1rem 0.65rem;
+  font-weight: 600; font-size: 0.82rem; color: rgba(244,242,238,0.8);
+  border: 1px solid rgba(205,176,122,0.35);
+}
+.pr-alevel-dot { color: rgba(205,176,122,0.5); }
+
+@media (max-width: 52rem) {
+  .pr-alevel { margin-top: 2rem; }
+  .pr-alevel-dot { display: none; }
+}
+</style>
 <!-- Mobile overrides: plain CSS, so they work with any Tailwind version, config or build -->
 <style>
   .hdr-short { display: none; }
@@ -98,6 +201,9 @@
     .hero-photos figure:hover img { transform: none; }
   }
 </style>
+
+
+
 
 <main id="top">
   <section class="bg-char bg-[radial-gradient(ellipse_at_85%_0%,rgba(205,176,122,0.2),transparent_55%)] text-onchar pt-[clamp(4rem,10vw,7.5rem)] pb-[clamp(3.5rem,8vw,6rem)] max-[52rem]:pt-10 max-[52rem]:pb-24 max-[52rem]:min-h-[calc(100svh-3.5rem)] max-[52rem]:flex max-[52rem]:items-center">
@@ -193,7 +299,7 @@
             <span class="inline-block shrink-0 whitespace-nowrap md:whitespace-normal rounded-full bg-[rgba(205,176,122,0.12)] text-goldonchar text-[0.85rem] font-medium tracking-wide py-1 px-4 ring-1 ring-[rgba(205,176,122,0.5)] md:mb-6">A*AAA</span>
           </div>
           <div class="border-l-2 border-goldonchar pl-4 mb-6 font-serif text-[1.2rem] md:text-[1.35rem] leading-[1.45] max-w-[38rem] text-onchar">I&#8217;m Mete, a <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">third-year medical student at the University of Bristol</strong>, with an interest in <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">Anaesthetics and Critical Care</strong>.</div>
-          <p class="mb-4 text-oncharmuted max-w-[38rem]">I scored <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">2960 in the UCAT (Band 1, top 6%)</strong> and received <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">offers from Bristol, Sheffield and Liverpool</strong>. At Bristol, I scored <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">89/100 in my end-of-year exams</strong>, placing me <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">among the top performers in my cohort</strong>, for which I was awarded a <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">commendation of achievement</strong>. I was also awarded <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">the top prize in my year group for my Student Choice Essay</strong>. Previously, I achieved <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">ten grade 9s at GCSE</strong> and <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">A*AAA at A-Level</strong>.</p>
+          <p class="mb-4 text-oncharmuted max-w-[38rem]">I scored <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">2960 in the UCAT (Band 1, top 6%)</strong> and received <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">offers from Bristol, Sheffield and Liverpool</strong>. At Bristol, I scored <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">89/100 in my end-of-year exams</strong>, placing me <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">among the top performers in my cohort</strong>, for which I was awarded a <strng cls="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">commendation of achievement</strong>. I was also awarded <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">the top prize in my year group for my Student Choice Essay</strong>. Previously, I achieved <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">ten grade 9s at GCSE</strong> and <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">A*AAA at A-Level</strong>.</p>
           <p class="mb-4 text-oncharmuted max-w-[38rem]">I have delivered <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">over 300 hours of GCSE and A-Level Maths tutoring</strong>. Medical interview tutoring allows me to combine that teaching experience with my own interview experience and first-hand insight into medical school and clinical placements, offering students the <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">committed, personal support</strong> every applicant deserves.</p>
           <p class="mb-4 text-oncharmuted max-w-[38rem]">My sessions focus on <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">understanding over memorisation</strong>, encouraging students to <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">think out loud</strong> and build clear, structured reasoning. Above all, I make sure every student feels <strong class="font-light text-onchar box-decoration-clone [box-shadow:inset_0_-0.2em_0_rgba(205,176,122,0.3)]">confident and well prepared</strong>, so they can perform at their very best on interview day.</p>
           <p cas="mt-6 pt-5 border-t border-[rgba(205,176,122,0.25)] max-w-[38rem] font-serif italic font-medium text-[1.3rem] md:text-[1.5rem] leading-[1.3] text-goldonchar">If you are looking for a tutor invested in your success, I would love to hear from you.</p>
@@ -224,68 +330,106 @@
   </section>
  
 <section class="py-[clamp(4rem,9vw,6.5rem)] max-[52rem]:py-12 bg-char bg-[radial-gradient(ellipse_at_15%_0%,rgba(205,176,122,0.14),transparent_55%)] text-onchar" id="pricing">
-    <div class="w-[min(70rem,100%_-_3rem)] max-[52rem]:w-[calc(100%_-_2.5rem)] mx-auto">
-      <h2 class="font-serif font-medium text-[clamp(2.2rem,4.4vw,3rem)] leading-[1.1] mb-6 max-[52rem]:mb-6 text-onchar after:block after:mt-4 after:h-0.5 after:w-12 after:rounded-full after:bg-gradient-to-r after:from-goldonchar after:to-transparent">Pricing &amp; contact</h2>
- 
-      <p class="text-oncharmuted max-w-[40rem] mb-8 max-[52rem]:mb-6">We offer two tiers: general consultation and guidance, or full interview practice. Both start at a base price and go down to accommodate each background.</p>
- 
-      <div class="grid lg:grid-cols-2 gap-8 max-[52rem]:gap-5 items-stretch">
-        <div class="flex flex-col rounded-2xl bg-[rgba(255,255,255,0.05)] ring-1 ring-[rgba(205,176,122,0.3)] shadow-dark hover:ring-[rgba(205,176,122,0.6)] p-8 max-[52rem]:p-6 transition duration-300 motion-safe:hover:-translate-y-1">
-          <span class="self-start rounded-full ring-1 ring-[rgba(205,176,122,0.5)] text-goldonchar text-[0.8rem] font-semibold tracking-wide px-3 py-0.5">Tier 1</span>
-          <div class="border-l-2 border-goldonchar pl-4 mt-5">
-            <p class="text-oncharmuted mb-1">Starting at</p>
-            <p class="font-serif font-semibold text-[clamp(3rem,6vw,4.2rem)] leading-none text-goldonchar mb-3">£25<small class="text-[0.4em] font-medium text-oncharmuted ml-[0.15em]">/hr</small></p>
-            <p class="text-oncharmuted">and going down</p>
-            <p class="mt-2 font-serif italic font-medium text-[1.5rem] leading-[1.25] text-onchar">General consultation and guidance</p>
+  <div class="w-[min(70rem,100%_-_3rem)] max-[52rem]:w-[calc(100%_-_2.5rem)] mx-auto">
+    <h2 class="font-serif font-semibold text-[clamp(2.2rem,4.4vw,3rem)] leading-[1.1] mb-6 text-onchar after:block after:mt-4 after:h-0.5 after:w-12 after:rounded-full after:bg-gradient-to-r after:from-goldonchar after:to-transparent">Pricing &amp; contact</h2>
+
+    <p class="text-oncharmuted max-w-[40rem] mb-8 max-[52rem]:mb-6">We offer two tiers, and we keep our rates flexible so that every family can find something that works.</p>
+
+    <!-- Free consultation -->
+    <div class="pr-free">
+      <span class="pr-free-badge">Free</span>
+      <div>
+        <h3 class="font-serif font-bold">Your first 15 minutes are on us!</h3>
+        <p class="text-oncharmuted">Come and have a relaxed chat. Tell us where you&#8217;re at, ask us anything, and see if we&#8217;re a good fit.  </p>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8 max-[52rem]:gap-5 items-stretch">
+
+      <!-- Tier 1 -->
+      <div class="flex flex-col rounded-3xl bg-[rgba(255,255,255,0.05)] ring-1 ring-[rgba(205,176,122,0.3)] shadow-dark hover:ring-[rgba(205,176,122,0.6)] p-8 max-[52rem]:p-6 transition duration-300 motion-safe:hover:-translate-y-1">
+        <span class="self-start rounded-full ring-1 ring-[rgba(205,176,122,0.5)] text-goldonchar text-[0.85rem] font-bold px-3.5 py-0.5">Tier 1</span>
+        <p class="pr-italic mt-4 font-serif font-bold text-[1.45rem] leading-[1.25] text-onchar">General consultation</p>
+
+        <div class="pr-scale-wrap">
+          <div class="pr-scale-cap">Per hour</div>
+          <div class="pr-grid pr-track" aria-hidden="true">
+            <span class="pr-dot d1"></span><span class="pr-dot d2"></span><span class="pr-dot d3"></span>
           </div>
-          <div class="mt-8 max-[52rem]:mt-6 grow rounded-xl bg-[rgba(255,255,255,0.05)] ring-1 ring-[rgba(205,176,122,0.25)] shadow-dark p-6 max-[52rem]:p-5">
-            <div class="text-sm font-semibold uppercase tracking-widest text-goldonchar mb-4">Inclusive</div>
-            <ul class="space-y-3 leading-snug max-[52rem]:text-[0.98rem]">
-              <li class="flex items-start gap-3"><span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(205,176,122,0.15)] text-goldonchar ring-1 ring-[rgba(205,176,122,0.5)]"><svg class="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="text-oncharmuted">General consultation and advice</span></li>
-              <li class="flex items-start gap-3"><span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(205,176,122,0.15)] text-goldonchar ring-1 ring-[rgba(205,176,122,0.5)]"><svg class="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="text-oncharmuted">Limited interview question practice</span></li>
-              <li class="flex items-start gap-3"><span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(205,176,122,0.15)] text-goldonchar ring-1 ring-[rgba(205,176,122,0.5)]"><svg class="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="text-oncharmuted">General mentoring</span></li>
-              <li class="flex items-start gap-3"><span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(205,176,122,0.15)] text-goldonchar ring-1 ring-[rgba(205,176,122,0.5)]"><svg class="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="text-oncharmuted">Insider knowledge and resources</span></li>
-            </ul>
+          <div class="pr-grid">
+            <div class="pr-step pr-s1"><span class="pr-amt">£15</span><span class="pr-lbl">Concession</span><span class="pr-sub">if you need it</span></div>
+            <div class="pr-step pr-s2"><span class="pr-amt">£20</span><span class="pr-lbl">Base</span><span class="pr-sub">our standard</span></div>
+            <div class="pr-step pr-s3"><span class="pr-amt">£25</span><span class="pr-lbl">Expected</span><span class="pr-sub">what we hope for</span></div>
           </div>
+          <!-- <p class="pr-note">Concession rates are there for anyone who needs them. Just let us know when you get in touch.</p> -->
         </div>
-        <div class="flex flex-col rounded-2xl bg-[rgba(255,255,255,0.05)] ring-2 ring-[rgba(205,176,122,0.75)] shadow-gold hover:ring-goldonchar p-8 max-[52rem]:p-6 transition duration-300 motion-safe:hover:-translate-y-1">
-          <span class="self-start rounded-full bg-goldonchar text-[#232529] text-[0.8rem] font-semibold tracking-wide px-3 py-0.5">Tier 2</span>
-          <div class="border-l-2 border-goldonchar pl-4 mt-5">
-            <p class="text-oncharmuted mb-1">Starting at</p>
-            <p class="font-serif font-semibold text-[clamp(3rem,6vw,4.2rem)] leading-none text-goldonchar mb-3">£45<small class="text-[0.4em] font-medium text-oncharmuted ml-[0.15em]">/hr</small></p>
-            <p class="text-oncharmuted">and going down</p>
-            <p class="mt-2 font-serif italic font-medium text-[1.5rem] leading-[1.25] text-onchar">Full interview practice</p>
-          </div>
-          <div class="mt-8 max-[52rem]:mt-6 grow rounded-xl bg-[rgba(255,255,255,0.05)] ring-1 ring-[rgba(205,176,122,0.25)] shadow-dark p-6 max-[52rem]:p-5">
-            <div class="text-sm font-semibold uppercase tracking-widest text-goldonchar mb-4">Inclusive</div>
-            <ul class="space-y-3 leading-snug max-[52rem]:text-[0.98rem]">
-              <li class="flex items-start gap-3"><span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(205,176,122,0.15)] text-goldonchar ring-1 ring-[rgba(205,176,122,0.5)]"><svg class="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="text-oncharmuted"><strong class="font-light text-onchar">Full</strong> MMI / Panel timed mock interview</span></li>
-              <li class="flex items-start gap-3"><span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(205,176,122,0.15)] text-goldonchar ring-1 ring-[rgba(205,176,122,0.5)]"><svg class="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="text-oncharmuted"><strong class="font-light text-onchar">Full</strong> breakdown and feedback of answers</span></li>
-              <li class="flex items-start gap-3"><span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(205,176,122,0.15)] text-goldonchar ring-1 ring-[rgba(205,176,122,0.5)]"><svg class="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="text-oncharmuted"><strong class="font-light text-onchar">Full</strong> strategy + unique answer prep</span></li>
-              <li class="flex items-start gap-3"><span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(205,176,122,0.15)] text-goldonchar ring-1 ring-[rgba(205,176,122,0.5)]"><svg class="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="text-oncharmuted"><strong class="font-light text-onchar">Full</strong> text / call support until A-Levels finish</span></li>
-            </ul>
-          </div>
+
+        <div class="mt-8 max-[52rem]:mt-6 grow rounded-2xl bg-[rgba(255,255,255,0.05)] ring-1 ring-[rgba(205,176,122,0.25)] shadow-dark p-6 max-[52rem]:p-5">
+          <div class="text-base font-bold text-goldonchar mb-4">What&#8217;s included</div>
+          <ul class="space-y-3 leading-snug max-[52rem]:text-[0.98rem]">
+            <li class="flex items-start gap-3"><span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(205,176,122,0.15)] text-goldonchar ring-1 ring-[rgba(205,176,122,0.5)]"><svg class="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="text-oncharmuted">General consultation and advice</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(205,176,122,0.15)] text-goldonchar ring-1 ring-[rgba(205,176,122,0.5)]"><svg class="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="text-oncharmuted">Limited interview question practice</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(205,176,122,0.15)] text-goldonchar ring-1 ring-[rgba(205,176,122,0.5)]"><svg class="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="text-oncharmuted">General mentoring</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(205,176,122,0.15)] text-goldonchar ring-1 ring-[rgba(205,176,122,0.5)]"><svg class="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="text-oncharmuted">Insider knowledge and resources</span></li>
+          </ul>
         </div>
       </div>
- 
-      <p class="mt-8 max-[52rem]:mt-6 text-oncharmuted max-w-[36rem]">We&#8217;re glad to have a chat about any query, even regarding another area of medical school. Both of us are also happy to help in A-Level preparation.</p>
- 
-      <div class="mt-[clamp(3.5rem,7vw,5rem)] max-[52rem]:mt-12" id="contact">
-        <h3 class="font-serif font-medium text-[clamp(1.9rem,3.2vw,2.4rem)] mb-2">Get in touch</h3>
-        <p class="text-oncharmuted max-w-[36rem] mb-8 max-[52rem]:mb-6">Email either of us to arrange an initial chat.</p>
-        <div class="grid gap-5 max-[52rem]:gap-3 grid-cols-[repeat(auto-fit,minmax(16rem,1fr))]">
-          <a class="block no-underline rounded-2xl bg-[rgba(255,255,255,0.05)] ring-1 ring-[rgba(205,176,122,0.4)] shadow-dark py-5 px-6 max-[52rem]:py-4 transition duration-300 motion-safe:hover:-translate-y-1 hover:ring-goldonchar hover:bg-[rgba(205,176,122,0.1)] hover:shadow-gold" href="mailto:metewatson8@gmail.com">
-            <span class="block font-serif font-semibold text-[1.4rem]">Mete</span>
-            <span class="block text-goldonchar text-[0.95rem] [overflow-wrap:anywhere]">metewatson8@gmail.com</span>
-          </a>
-          <a class="block no-underline rounded-2xl bg-[rgba(255,255,255,0.05)] ring-1 ring-[rgba(205,176,122,0.4)] shadow-dark py-5 px-6 max-[52rem]:py-4 transition duration-300 motion-safe:hover:-translate-y-1 hover:ring-goldonchar hover:bg-[rgba(205,176,122,0.1)] hover:shadow-gold" href="mailto:ilkin.mengusoglu.23@ucl.ac.uk">
-            <span class="block font-serif font-semibold text-[1.4rem]">Ilkin</span>
-            <span class="block text-goldonchar text-[0.95rem] [overflow-wrap:anywhere]">ilkin.mengusoglu.23@ucl.ac.uk</span>
-          </a>
+
+      <!-- Tier 2 -->
+      <div class="flex flex-col rounded-3xl bg-[rgba(255,255,255,0.05)] ring-2 ring-[rgba(205,176,122,0.75)] shadow-gold hover:ring-goldonchar p-8 max-[52rem]:p-6 transition duration-300 motion-safe:hover:-translate-y-1">
+        <span class="self-start rounded-full bg-goldonchar text-[#232529] text-[0.85rem] font-bold px-3.5 py-0.5">Tier 2</span>
+        <p class="pr-italic mt-4 font-serif font-bold text-[1.45rem] leading-[1.25] text-onchar">Full interview practice</p>
+
+        <div class="pr-scale-wrap">
+          <div class="pr-scale-cap">Per hour</div>
+          <div class="pr-grid pr-track" aria-hidden="true">
+            <span class="pr-dot d1"></span><span class="pr-dot d2"></span><span class="pr-dot d3"></span>
+          </div>
+          <div class="pr-grid">
+            <div class="pr-step pr-s1"><span class="pr-amt">£30</span><span class="pr-lbl">Concession</span><span class="pr-sub">if you need it</span></div>
+            <div class="pr-step pr-s2"><span class="pr-amt">£40</span><span class="pr-lbl">Base</span><span class="pr-sub">our standard</span></div>
+            <div class="pr-step pr-s3"><span class="pr-amt">£45</span><span class="pr-lbl">Expected</span><span class="pr-sub">what we hope for</span></div> 
+            <!-- <span class="pr-suggest">Suggested</span> -->
+          </div>
+          <!-- <p class="pr-note">Concession rates are there for anyone who needs them. Just let us know when you get in touch.</p> -->
+        </div>
+
+        <div class="mt-8 max-[52rem]:mt-6 grow rounded-2xl bg-[rgba(255,255,255,0.05)] ring-1 ring-[rgba(205,176,122,0.25)] shadow-dark p-6 max-[52rem]:p-5">
+          <div class="text-base font-bold text-goldonchar mb-4">What&#8217;s included</div>
+          <ul class="space-y-3 leading-snug max-[52rem]:text-[0.98rem]">
+            <li class="flex items-start gap-3"><span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(205,176,122,0.15)] text-goldonchar ring-1 ring-[rgba(205,176,122,0.5)]"><svg class="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="text-oncharmuted"><strong class="font-bold text-onchar">Full</strong> MMI / Panel timed mock interview</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(205,176,122,0.15)] text-goldonchar ring-1 ring-[rgba(205,176,122,0.5)]"><svg class="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="text-oncharmuted"><strong class="font-bold text-onchar">Full</strong> breakdown and feedback of answers</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(205,176,122,0.15)] text-goldonchar ring-1 ring-[rgba(205,176,122,0.5)]"><svg class="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="text-oncharmuted"><strong class="font-bold text-onchar">Full</strong> strategy + unique answer prep</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(205,176,122,0.15)] text-goldonchar ring-1 ring-[rgba(205,176,122,0.5)]"><svg class="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg></span><span class="text-oncharmuted"><strong class="font-bold text-onchar">Full</strong> text / call support until A-Levels finish</span></li>
+          </ul>
         </div>
       </div>
     </div>
-  </section>
+
+    <div class="pr-alevel">
+  <span class="pr-alevel-title font-serif">We also teach A-Level:</span>
+  <span class="pr-alevel-person"><span class="pr-alevel-name">Mete</span><span class="pr-chip">Maths</span></span>
+  <span class="pr-alevel-dot" aria-hidden="true">&middot;</span>
+  <span class="pr-alevel-person"><span class="pr-alevel-name">Ilkin</span><span class="pr-chip">Maths</span><span class="pr-chip">Chemistry</span></span>
+</div>
+    <div class="mt-[clamp(3.5rem,7vw,5rem)] max-[52rem]:mt-12" id="contact">
+      <h3 class="font-serif font-bold text-[clamp(1.9rem,3.2vw,2.4rem)] mb-2">Get in touch</h3>
+      <p class="text-oncharmuted max-w-[36rem] mb-8 max-[52rem]:mb-6">Drop either of us an email to book your free 15-minute chat.</p>
+      <div class="grid gap-5 max-[52rem]:gap-3 grid-cols-[repeat(auto-fit,minmax(16rem,1fr))]">
+        <a class="block no-underline rounded-2xl bg-[rgba(255,255,255,0.05)] ring-1 ring-[rgba(205,176,122,0.4)] shadow-dark py-5 px-6 max-[52rem]:py-4 transition duration-300 motion-safe:hover:-translate-y-1 hover:ring-goldonchar hover:bg-[rgba(205,176,122,0.1)] hover:shadow-gold" href="mailto:metewatson8@gmail.com">
+          <span class="block font-serif font-bold text-[1.4rem]">Mete</span>
+          <span class="block text-goldonchar text-[0.95rem] [overflow-wrap:anywhere]">metewatson8@gmail.com</span>
+        </a>
+        <a class="block no-underline rounded-2xl bg-[rgba(255,255,255,0.05)] ring-1 ring-[rgba(205,176,122,0.4)] shadow-dark py-5 px-6 max-[52rem]:py-4 transition duration-300 motion-safe:hover:-translate-y-1 hover:ring-goldonchar hover:bg-[rgba(205,176,122,0.1)] hover:shadow-gold" href="mailto:ilkin.mengusoglu.23@ucl.ac.uk">
+          <span class="block font-serif font-bold text-[1.4rem]">Ilkin</span>
+          <span class="block text-goldonchar text-[0.95rem] [overflow-wrap:anywhere]">ilkin.mengusoglu.23@ucl.ac.uk</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 </main>
  
 <footer class="bg-chardeep text-oncharmuted text-[0.9rem] py-7 max-[52rem]:pb-[calc(7rem_+_env(safe-area-inset-bottom))]">
